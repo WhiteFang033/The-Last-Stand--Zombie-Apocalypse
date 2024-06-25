@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('../assets/images/bg3.png');
+}
+
+.container{
+    width: 100svw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+}
+
+.instructionsWindow{
+    position: absolute;
+    width: 99%;
+    height: 98%;
+    background-color: black;
+    z-index: 20;
+    border: 5px inset rgb(193, 192, 192);
+    color: white;
+    font-family: "Press Start 2P", system-ui;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.head{
+    font-size: 2rem;
+    position: relative;
+    top: -8%;
+}
+
+.instructions{
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+.instructions ol{
+    margin: 10px 0;
+}
+
+.instructions ol li{
+    margin: 20px 0;
+    line-height: 20px;
+}
+
+#start{
+    width: 15%;
+    height: 10%;
+    margin: 10px;
+    font-size: 1.5rem;
+    font-family: "Press Start 2P", system-ui;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: .2s ease;
+    border: 3px outset rgb(165, 165, 165);
+}
+
+#start:hover{
+    color: black;
+    background-color: rgb(223, 223, 223);
+    border: 3px inset rgb(165, 165, 165);
+}
+
+.hud{
+    width: 80%;
+    height: 10%;
+    top: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.health{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.healthbar{
+    width: 80%;
+    height: 50%;
+    border:5px outset rgb(199, 198, 198);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.hp{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 185, 1);
+}
+
+.scoreboard{
+    width: 38%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.highscore, .score{
+    width: 40%;
+    height: 60%;
+    border:5px outset rgb(187, 187, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
+    color: white;
+    cursor:default;
+}
+
+
+.options{
+    width: auto;
+    height: 60%;
+    border:5px outset grey;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+canvas{
+    border: 10px outset rgb(163, 163, 163);
+}
+
+.menu{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(63, 63, 63, 0.158);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.menuOptions{
+    border: 5px outset rgb(161, 161, 161);
+    background-color: black;
+    width: 30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu button{
+    width: 40%;
+    height: 10%;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-family: "Press Start 2P", system-ui;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: .2s ease;
+}
+
+.menu p{
+    position: relative;
+    top: -10%;
+    font-size: 2.5rem;
+    font-family: "Press Start 2P", system-ui;
+    letter-spacing: 10px;
+}
+
+.menu button:hover{
+    background-color: white;
+    color: black;
+}
+
+.gameOver{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(63, 63, 63, 0.158);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.overOptions{
+    border: 5px outset rgb(161, 161, 161);
+    background-color: black;
+    width: 30%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.gameOver button{
+    width: 40%;
+    height: 10%;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-family: "Press Start 2P", system-ui;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: .2s ease;
+}
+
+.gameOver p{
+    position: relative;
+    top: -10%;
+    font-size: 2.5rem;
+    font-family: "Press Start 2P", system-ui;
+    letter-spacing: 10px;
+}
+
+.gameOver button:hover{
+    background-color: white;
+    color: black;
+}

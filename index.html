@@ -2,14 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <title>The Last Stand</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/utilities.js" defer></script>
+    <script src="js/controls.js" defer></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/box.js"></script>
+    <script src="js/zombie.js" defer></script>
+    <script src="js/bullet.js" defer></script>
+    <script src="js/player.js" defer></script>
     <script src="js/index.js" defer></script>
-    <script src="js/utilities.js"></script>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+    <div class="container">
+        <div class="instructionsWindow">
+            <div class="head">THE LAST STAND</div>
+            <div class="instructions">
+                <p>INSTRUCTIONS</p>
+                <ol>
+                    <li>This is a Zombie Survival Game which means you have to be the last one standing until the end.</li>
+                    <li>Player has to shoot down the zombies with the arrows. If Zombies damage do when they come in contact.</li>
+                    <li>Player has been given two boulders to set up the base. Place them strategically to increase the survival time.</li>
+                    <li>Zombies cannot climb up the boulder but player can.</li>
+                    <li>Each Boulder has its HP, Zombies damage the boulder when the make contact with it. </li>
+                    <li>You Are Good To Go Now!</li>
+                </ol>
+            </div>
+            <button id="start">PLAY</button>
+        </div>
+        <div class="hud">
+            <div class="scoreboard">
+                <div class="highscore" id="highscore">High Score- 0</div>
+                <div class="score" id="score"> Score- 0</div>
+            </div>
+            <div class="health">
+                <img src="assets/icons/vecteezy_heart-pixel-art-vector-isolated_11373405-removebg-preview.png" height="60px" alt="">
+                <div class="healthbar"><div class="hp" id="hp"></div></div>
+            </div>
+            <div class="options" id="pause"><img data-role="pause" src="assets/icons/pause.svg" alt="" height="40px" style="position: relative; z-index: 0;"></div>
+        </div>
+        <canvas id="canvas"></canvas>
+
+        <div class="menu">
+            <div class="menuOptions">
+                <p>MENU</p>
+                <button data-role="resume">Resume</button>
+                <button data-role="restart">Restart</button>
+                <button data-role="exit">Exit</button>
+            </div>
+        </div>
+        <div class="gameOver">
+            <div class="overOptions">
+                <p>GameOver</p>
+                <button data-role="restart">Restart</button>
+                <button data-role="exit">Exit</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
