@@ -14,6 +14,7 @@ class BulletOperator{
     draw(){
         this.bullets.forEach(bullet=>{
             bullet.draw();
+            console.log(bullet.position)
             if((bullet.position.x < (-canvas.width) || bullet.position.x>(canvas.width) || bullet.position.y < (-canvas.height) || bullet.position.y>(canvas.height)) && this.bullets != undefined){
                 const index = this.bullets.indexOf(bullet);
                 if (index > -1) { 

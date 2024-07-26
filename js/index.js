@@ -221,7 +221,10 @@ function collisionDetector(zombie, bullet){
                           y: zombie.position.y
                         };
     if(zombie.direction === 'left'){
-        if(bulletPosition.x<= zombiePosition.x + zombieDimensions.width && bulletPosition.x>= zombiePosition.x && bulletPosition.y>= zombiePosition.y && bulletPosition.y <= zombiePosition.y + zombieDimensions.height+20){
+        if(bulletPosition.x <= zombiePosition.x + zombieDimensions.width &&
+            bulletPosition.x >= zombiePosition.x &&
+            bulletPosition.y >= zombiePosition.y &&
+            bulletPosition.y <= zombiePosition.y + zombieDimensions.height){
             const indexBullet = player.bulletOperator.bullets.indexOf(bullet);
                 if (indexBullet > -1) { 
                     player.bulletOperator.bullets.splice(indexBullet, 1);
@@ -237,7 +240,10 @@ function collisionDetector(zombie, bullet){
         
     }
     else if(zombie.direction === 'right'){
-        if(bulletPosition.x>= zombiePosition.x && bulletPosition.x<= zombiePosition.x + zombieDimensions.width && bulletPosition.y>= zombiePosition.y && bulletPosition.y <= zombiePosition.y + zombieDimensions.height){
+        if(bulletPosition.x >= zombiePosition.x &&
+            bulletPosition.x <= zombiePosition.x + zombieDimensions.width &&
+            bulletPosition.y >= zombiePosition.y &&
+            bulletPosition.y <= zombiePosition.y + zombieDimensions.height){
             const indexBullet = player.bulletOperator.bullets.indexOf(bullet);
                 if (indexBullet > -1) { 
                     player.bulletOperator.bullets.splice(indexBullet, 1);

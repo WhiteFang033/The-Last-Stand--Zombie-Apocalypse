@@ -61,11 +61,11 @@ class Player extends Sprite{
             this.velocity.y = 0;
             onGround = true;
         }
-        else if((this.position.y + this.height + boxes[0].height >= (canvas.height - this.velocity.y)) && (this.position.x-boxes[0].position.x)>=0 &&(this.position.x-boxes[0].position.x)<= boxDimensions.width){
+        else if(boxes[0] != undefined && (this.position.y + this.height + boxes[0].height >= (canvas.height - this.velocity.y)) && (this.position.x-boxes[0].position.x)>=0 &&(this.position.x-boxes[0].position.x)<= boxDimensions.width){
             this.velocity.y = 0;
             onGround = true;
         }
-        else if((this.position.y + this.height + boxes[1].height >= (canvas.height - this.velocity.y)) && (this.position.x-boxes[1].position.x)>=0 &&(this.position.x-boxes[1].position.x)<= boxDimensions.width){
+        else if(boxes[1] != undefined &&(this.position.y + this.height + boxes[1].height >= (canvas.height - this.velocity.y)) && (this.position.x-boxes[1].position.x)>=0 &&(this.position.x-boxes[1].position.x)<= boxDimensions.width){
             this.velocity.y = 0;
             onGround = true;
         }
